@@ -1,6 +1,8 @@
 students-database
 =================
 
+<a href="https://travis-ci.org/ebessarabov/students-database"><img src="https://travis-ci.org/ebessarabov/students-database.svg?branch=master"></a>
+
 A Symfony project created on May 15, 2016, 1:59 pm.
 
 Run project:

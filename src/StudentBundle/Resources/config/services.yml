@@ -1,0 +1,15 @@
+services:
+    student.command.generate_path:
+        class: StudentBundle\Command\GeneratePathCommand
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            -  { name: console.command }
+
+    student_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory: ['@doctrine.orm.entity_manager', getRepository]
+        arguments: ['StudentBundle:Student']
+
+    student.services.student_service:
+        class: StudentBundle\Services\StudentService
+        arguments: ["@student_repository"]

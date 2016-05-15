@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Student details{% endblock %}
+
+{% block body %}
+    {% if student is defined %}
+        <h1>{{ student.name is defined ? student.name : 'Not found' }}</h1>
+        <p>{{ student.description is defined ? student.description : 'Not found' }}</p>
+        <p>{{ 'now'|date('Y-m-d H:m:s') }}</p>
+    {% endif %}
+{% endblock %}

@@ -1,4 +1,4 @@
 StudentBundle\Entity\Student:
     student{1..25000}:
-        name: Jon Snow <current()>
-        description: You know nothing
+        name: <firstName()> <lastName()>
+        description: <sentence()>

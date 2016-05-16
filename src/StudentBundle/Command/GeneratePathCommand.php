@@ -63,8 +63,9 @@ class GeneratePathCommand extends ContainerAwareCommand
         $iterableResult = $query->iterate();
         foreach ($iterableResult as $row) {
             $student = $row[0];
-            $path = str_replace(' ', '_', $student->getName());
-            $student->setPath(strtolower($path));
+            $path = $this->getContainer()->get('student.services.student_service')->getUniquePath($student->getName());
+
+            $student->setPath($path);
             if (($iterator % self::STUDENTS_UPDATE_STEP) === 0) {
                 $this->entityManager->flush(); // Executes all updates.
                 $this->entityManager->clear(); // Detaches all objects from Doctrine!

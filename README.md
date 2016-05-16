@@ -15,6 +15,8 @@ Run project:
 
     php bin/console h:d:f:l
 
+    php bin/console students:generate:paths
+
     php bin/console assets:install
 
     php bin/console server:run

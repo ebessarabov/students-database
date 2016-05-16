@@ -15,4 +15,4 @@
 /vendor/
 /web/bundles/
 /.idea/
-/app/data/students-database.db3
+/app/students-database.db3
